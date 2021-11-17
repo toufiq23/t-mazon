@@ -7,6 +7,7 @@ function Home() {
 		<div className="home">
 			<div className="home_container">
 				<img className="home_image" src="/images/Hompage-amazon.png" alt="" />
+				
 				<div className="home_row">
 					<Product
 							id="12321341"

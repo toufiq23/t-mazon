@@ -16,15 +16,17 @@ function Orders() {
 			.collection("orders")
 			.orderBy("created", "desc")
 			.onSnapshot(snapshot => (
-				setOrders(snapshot.docs.map(doc => ({
-					id: doc.id,
-					data: doc.data()
-				})))
-			))
-		}else{
-			setOrders([])
-		}
-	}, [user])
+				setOrders(snapshot.docs.map(doc => (
+					{
+						id: doc.id,
+						data: doc.data()
+					})))
+					))
+				}else{
+					setOrders([])
+				}
+			}, [user])
+			console.log("Snapshot Docs: ", db.onSnapshot.docs)
 
 	return (
 		<div className="orders">

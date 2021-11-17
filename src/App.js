@@ -11,6 +11,7 @@ import { auth } from "./firebase"
 import { useStateValue } from './ContextHook/StateProvider';
 import { loadStripe } from "@stripe/stripe-js"
 import { Elements } from "@stripe/react-stripe-js"
+import AddProducts from './AddProducts/AddProducts';
 
 const promise = loadStripe("pk_test_51JpqOYAOXgOi7Cynrwq6SsC04bUFzvlpTLQBVi6GJTyalcBw9SMBt2BfuLvNm6sh8ocUXHlU1j7H1jwuWf3zVzcg00PAMBmxhf")
 
@@ -43,6 +44,11 @@ function App() {
 		<BrowserRouter>
 			<div className="app">
 				<Switch>
+					<Route exact path="/addproducts">
+						<Header />
+						<AddProducts />
+					</Route>
+
 					<Route exact path="/orders">
 						<Header />
 						<Orders />

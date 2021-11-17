@@ -4,6 +4,7 @@ import './CSS/index.css';
 import App from './App';
 import {StateProvider} from "../src/ContextHook/StateProvider"
 import reducer, { initialState } from "../src/ContextHook/reducer"
+import "bootstrap/dist/css/bootstrap.css"
 
 ReactDOM.render(
   <React.StrictMode>
